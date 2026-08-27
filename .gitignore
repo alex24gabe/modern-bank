@@ -1,41 +1,63 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ============================================================
+# Dependencies
+# ============================================================
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+node_modules/
+.pnpm-store/
 
-# testing
-/coverage
+# ============================================================
+# Next.js
+# ============================================================
 
-# next.js
-/.next/
-/out/
+client/.next/
+client/out/
 
-# production
-/build
+# ============================================================
+# Environment / secrets
+# ============================================================
 
-# misc
-.DS_Store
-*.pem
+.env
+.env.*
+!.env.example
 
-# debug
+backend/.env
+backend/.env.*
+client/.env
+client/.env.*
+
+# ============================================================
+# Logs
+# ============================================================
+
+*.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# ============================================================
+# Coverage
+# ============================================================
 
-# vercel
-.vercel
+coverage/
+.nyc_output/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# ============================================================
+# OS files
+# ============================================================
+
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Editor
+# ============================================================
+
+.vscode/
+.idea/
+
+# ============================================================
+# Runtime / temporary files
+# ============================================================
+
+*.tmp
+*.temp
